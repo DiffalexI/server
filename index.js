@@ -26,6 +26,4 @@ app.get('/command', (req, res) => {
     return res.status(404).json({ error: 'No command available' });
 });
 
-module.exports = (req, res) => {
-    app(req, res);
-};
+module.exports = app;
