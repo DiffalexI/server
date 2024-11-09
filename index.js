@@ -2,10 +2,10 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
+let latestCommand = '';
+
 app.use(cors());
 app.use(express.json());
-
-let latestCommand = '';
 
 app.post('/execute', (req, res) => {
     const { command } = req.body;
