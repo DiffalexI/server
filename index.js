@@ -1,3 +1,4 @@
+// index.js
 const express = require('express');
 const cors = require('cors');
 
@@ -26,4 +27,5 @@ app.get('/command', (req, res) => {
     return res.status(404).json({ error: 'No command available' });
 });
 
+// Export the app for Vercel as a serverless function
 module.exports = app;
